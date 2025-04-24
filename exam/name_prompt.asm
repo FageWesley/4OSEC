@@ -43,3 +43,6 @@ _start:
     mov eax, 1          
     xor ebx, ebx        
     int 0x80            
+
+; Il est, d'un manière générale, préférable de diviser le code en fonctions (exit, get_input ...) puis les appeler depuis _start
+; Cela rendra le code plus humain, plus besoin des commentaires qui deviendront redondants et vous pourrez donc les enlever.

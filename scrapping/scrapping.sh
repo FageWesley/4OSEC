@@ -17,3 +17,6 @@ for link in $site;do
 	fi
 done
 
+# On peut aussi passer les variables arguments en à la fonction sqlite3 afin d'écrire en base de données exactement les
+# inputs de l'utilisateur (si l'utilisateur entre un input malveillant, il sera écrit tel quel dans la base de données)
+# "INSERT INTO scrapped(title,description) VALUES (?, ?);" "$url" "$title"
