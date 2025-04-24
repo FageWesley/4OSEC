@@ -20,3 +20,6 @@ done
 # On peut aussi passer les variables arguments en à la fonction sqlite3 afin d'écrire en base de données exactement les
 # inputs de l'utilisateur (si l'utilisateur entre un input malveillant, il sera écrit tel quel dans la base de données)
 # "INSERT INTO scrapped(title,description) VALUES (?, ?);" "$url" "$title"
+
+# Cela évite au passage de signaler une injection SQL si le titre de la page est par exemple "L'année de WESTERN UNION"
+# On se retrouverait avec des "SQL injection detected" dans les logs etc.
